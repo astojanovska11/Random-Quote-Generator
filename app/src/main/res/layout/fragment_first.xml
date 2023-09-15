@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello there! Choose a quote category you would like to view today, or click on the Quote Of The Day button if you want to view the World's Quote of the day"
+        app:layout_constraintBottom_toTopOf="@id/radio_group_theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_first">
+
+        <RadioButton
+            android:id="@+id/radio_theme_love"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Love" />
+
+        <RadioButton
+            android:id="@+id/radio_theme_wisdom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wisdom" />
+
+        <RadioButton
+            android:id="@+id/radio_theme_funny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Funny" />
+
+        <RadioButton
+            android:id="@+id/radio_theme_motivational"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motivational" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group_theme" />
+
+    <Button
+        android:id="@+id/button_quote_of_the_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quote of the Day"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_theme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
